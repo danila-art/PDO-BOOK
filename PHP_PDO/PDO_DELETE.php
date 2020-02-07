@@ -23,9 +23,10 @@ else {
 $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
 
 //если введенные данные отличные от null, выполняем удаление записи из базы данных
-if (!$delete_book == null) {
-    $delete_info = $connection->prepare("DELETE FROM `info` WHERE `id_b` = $delete_book");
-    $delete_b = $connection->prepare("DELETE FROM `book` WHERE id_b` = $delete_book");
-    $delete_a = $connection->prepare("DELETE FROM `author` WHERE `id_a` = $delete_author");
+if ($delete_book != null) {
+    $delete_info = $connection->query("DELETE FROM `info` WHERE `id_b` = '$delete_book'");
+    $delete_b = $connection->query("DELETE FROM `book` WHERE `id_b` = '$delete_book'");
+    $delete_a = $connection->query("DELETE FROM `author` WHERE `id_a` = '$delete_author'");
 }
 //-----------------------------------------БЛОК УДАЛЕНИЯ ДАННЫХ ИЗ ТАБЛИЦ-----------------------------------------------
+
