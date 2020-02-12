@@ -8,29 +8,28 @@
 </head>
 <body>
 <div class="container">
-    <header>
-        <div class="header">
-            <div class="head_menu">
-
+    <div class="header">
+        <div class="button_box_header">
+            <div class="button_header">
+                <a href="INTERNAL_PAGE/ADD_BOOK.php" class="botr">Добавить книгу</a>
             </div>
-            <div class="head_image">
-                <img src="IMAGES/hero-curriculum.png" alt="">
+            <div class="button_header">
+                <a href="INTERNAL_PAGE/DELETE_BOOK.php" class="botr">Удалить книгу</a>
+            </div>
+            <div class="button_header">
+                <a href="#" class="botr">Редактировать книгу</a>
             </div>
         </div>
-    </header>
-<div class="main">
+        <div class="image_header">
+            <img id="image_book_header" src="IMAGES/books-1281581_1280.jpg" alt="">
+        </div>
+    </div>
+    <div class="main">
 
-</div>
-    <footer>
+    </div>
+    <div class="footer">
 
-    </footer>
+    </div>
 </div>
-<!--<div>-->
-<!--    <a href="INTERNAL_PAGE/ADD_BOOK.php">Страница добавления книги</a><hr>-->
-<!--    <a href="INTERNAL_PAGE/DELETE_BOOK.php">Страница удаления книги</a>-->
-<!--</div>-->
-<!--<hr>-->
-<!---->
-<!--<a href="PHP_PDO/VIEW_BOOK.php">TEST</a>-->
 </body>
 </html>
