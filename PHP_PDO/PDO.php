@@ -61,3 +61,10 @@ $add_a = $connection->query("INSERT INTO `author` (`id_a`, `fio`) VALUES ('$id_a
 
 //Соединяем две таблицы
 $add_info = $connection->query("INSERT INTO `info` (`id_a`, `id_b`) VALUES ('$id_a','$id_b')");
+
+require_once ('../INTERNAL_PAGE/ADD_BOOK.php');
+if ($id_a != null && $id_b != null && $name != null && $fio != null){
+    echo '<script>
+alert("Добавление успешно выполнено");
+</script>';
+}

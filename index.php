@@ -26,6 +26,43 @@
     </div>
     <div class="main">
 
+        <div>
+            <table>
+                <caption>
+                    Холодные закуски
+                </caption>
+                <tr>
+                    <th>Название книги</th>
+                    <th>ФИО автора</th>
+                    <th>Цена, руб.</th>
+                </tr>
+                <?php
+                //Выполняем подключение к базе данных
+                $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
+
+                //Получаем данные
+                $data = $connection->query("SELECT `book`.`id_b`, `book`.`name`, `author`.`id_a`, `author`.`fio` FROM `book` INNER JOIN `info` ON `info`.`id_a` = `book`.`id_b` INNER JOIN `author` ON `info`.`id_a` = `author`.`id_a`");
+                //$data_b = $connection->query("SELECT * FROM `book`");
+                //$data_a = $connection->query("SELECT * FROM `author`");
+
+                //Выводим результат
+                while ($row = $data->fetch()){
+                    $basik = rand(10, 1000);
+                    echo "
+                    <tr>
+                    <td>{$row['name']}</td>
+                    <td>{$row['fio']}</td>
+                    <td>$basik</td>
+                    </tr>   
+              ";
+
+                }
+
+
+                ?>
+            </table>
+        </div>
+
     </div>
     <div class="footer">
 

@@ -29,4 +29,9 @@ if ($delete_book != null) {
     $delete_a = $connection->query("DELETE FROM `author` WHERE `id_a` = '$delete_author'");
 }
 //-----------------------------------------БЛОК УДАЛЕНИЯ ДАННЫХ ИЗ ТАБЛИЦ-----------------------------------------------
-
+require_once ('../INTERNAL_PAGE/DELETE_BOOK.php');
+if ($delete_book != null && $delete_author != null){
+    echo '<script>
+alert("Удаление книги успешно выполнено!")
+</script>';
+}

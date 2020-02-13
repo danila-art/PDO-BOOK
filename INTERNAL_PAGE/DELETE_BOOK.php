@@ -27,7 +27,17 @@
         </div>
     </div>
     <div class="main">
-
+        <div>
+            <form action="../PHP_PDO/PDO_DELETE.php" method="post">
+                <ul>
+                    <li>Введите id книги, которую желаете удалить</li>
+                    <li><input type="text" name="delete_book"></li>
+                    <li>Введите id автора, данной книги</li>
+                    <li><input type="text" name="delete_author"></li>
+                    <li><input type="submit" value="Удалить книгу"></li>
+                </ul>
+            </form>
+        </div>
     </div>
     <div class="footer">
 
@@ -36,14 +46,3 @@
 </body>
 </html>
 
-<!--<div>-->
-<!--    <form action="../PHP_PDO/PDO_DELETE.php" method="post">-->
-<!--        <ul>-->
-<!--            <li>Введите id книги, которую желаете удалить</li>-->
-<!--            <li><input type="text" name="delete_book"></li>-->
-<!--            <li>Введите id автора, данной книги</li>-->
-<!--            <li><input type="text" name="delete_author"></li>-->
-<!--            <li><input type="submit" value="Удалить книгу"></li>-->
-<!--        </ul>-->
-<!--    </form>-->
-<!--</div>-->
