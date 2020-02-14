@@ -27,15 +27,26 @@
         </div>
     </div>
     <div class="main">
-        <div>
+        <div class="form_del">
             <form action="../PHP_PDO/PDO_DELETE.php" method="post">
-                <ul>
-                    <li>Введите id книги, которую желаете удалить</li>
-                    <li><input type="text" name="delete_book"></li>
-                    <li>Введите id автора, данной книги</li>
-                    <li><input type="text" name="delete_author"></li>
-                    <li><input type="submit" value="Удалить книгу"></li>
-                </ul>
+                <div class="oglav_form">
+                    <h1>Удаление книги</h1>
+                </div>
+                <div class="text_delete">
+                    <p>Введите id книги, которую желаете удалить</p>
+                </div>
+                <div class="delete_input">
+                    <input type="text" name="delete_book">
+                </div>
+                <div class="text_delete">
+                  <p>Введите id автора, данной книги</p>
+                </div>
+                <div class="delete_input">
+                   <input type="text" name="delete_author">
+                </div>
+                <div class="submit_delete">
+                    <input type="submit" value="Удалить книгу">
+                </div>
             </form>
         </div>
     </div>
@@ -45,4 +56,10 @@
 </div>
 </body>
 </html>
-
+<ul>
+    <li>Введите id книги, которую желаете удалить</li>
+    <li><input type="text" name="delete_book"></li>
+    <li>Введите id автора, данной книги</li>
+    <li><input type="text" name="delete_author"></li>
+    <li><input type="submit" value="Удалить книгу"></li>
+</ul>

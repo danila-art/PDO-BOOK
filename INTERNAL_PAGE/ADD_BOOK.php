@@ -27,19 +27,38 @@
         </div>
     </div>
     <div class="main">
-        <div>
+        <div class="form_add">
             <form action="../PHP_PDO/PDO.php" method="post">
-                <ul>
-                    <li>Введите id книги</li>
-                    <li><input type="text" name="id_b"></li>
-                    <li>Введите название книги</li>
-                    <li><input type="text" name="name"></li>
-                    <li>Введите id Автора</li>
-                    <li><input type="text" name="id_a"></li>
-                    <li>Введите ФИО автора</li>
-                    <li><input type="text" name="fio"></li>
-                    <li><input type="submit" value="Добавить книгу"></li>
-                </ul>
+                <div class="oglav_form">
+                    <h1>Добавление книги</h1>
+                </div>
+                <div class="text_input">
+                    <p>Введите id книги</p>
+                </div>
+                <div class="add_input">
+                    <input type="text" name="id_b">
+                </div>
+                <div class="text_input">
+                    <p>Введите название книги</p>
+                </div>
+                <div class="add_input">
+                    <input type="text" name="name">
+                </div>
+                <div class="text_input">
+                    <p>Введите id Автора</p>
+                </div>
+                <div class="add_input">
+                    <input type="text" name="id_a">
+                </div>
+                <div class="text_input">
+                    <p>Введите ФИО автора</p>
+                </div>
+                <div class="add_input">
+                    <input type="text" name="fio">
+                </div>
+                <div class="button_submit">
+                    <input type="submit" value="Добавить книгу">
+                </div>
             </form>
         </div>
     </div>
@@ -52,3 +71,16 @@
 </body>
 </html>
 
+<form action="../PHP_PDO/PDO.php" method="post">
+    <ul>
+        <li>Введите id книги</li>
+        <li><input type="text" name="id_b"></li>
+        <li>Введите название книги</li>
+        <li><input type="text" name="name"></li>
+        <li>Введите id Автора</li>
+        <li><input type="text" name="id_a"></li>
+        <li>Введите ФИО автора</li>
+        <li><input type="text" name="fio"></li>
+        <li><input type="submit" value="Добавить книгу"></li>
+    </ul>
+</form>

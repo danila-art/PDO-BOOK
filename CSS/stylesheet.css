@@ -141,3 +141,30 @@ tr:nth-child(even) {
     font-family: sans-serif;
     letter-spacing: 1px;
 }
+
+/*-------------------Форма добавления--*/
+.form_add{
+
+}
+.oglav_form{
+
+}
+.text_input{
+
+}
+.add_input{
+
+}
+.button_submit
+/*-------------------Форма добавления--*/
+/*-------------------Форма удаления----*/
+.text_delete{
+
+}
+.delete_input{
+
+}
+.submit_delete{
+
+}
+/*-------------------Форма удаления----*/
