@@ -20,7 +20,13 @@ else {
 //-----------------------------------------БЛОК ПРОВЕРКИ АВТОР КОНЕЦ----------------------------------------------------
 //-----------------------------------------БЛОК УДАЛЕНИЯ ДАННЫХ ИЗ ТАБЛИЦ-----------------------------------------------
 //Выполняем подключение к базе данных
-$connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
+try{
+    $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
+//    $connection->getAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch (PDOException $e){
+    echo 'Подключение не удалось:'.$e->getMessage();
+    exit();
+}
 
 //если введенные данные отличные от null, выполняем удаление записи из базы данных
 if ($delete_book != null) {

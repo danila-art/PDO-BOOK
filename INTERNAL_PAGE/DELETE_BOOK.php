@@ -19,7 +19,7 @@
                 <a href="ADD_BOOK.php" class="botr">Добавить книгу</a>
             </div>
             <div class="button_header">
-                <a href="#" class="botr">Редактировать книгу</a>
+                <a href="../INTERNAL_PAGE/EDIT_BOOK.php" class="botr">Редактировать книгу</a>
             </div>
         </div>
         <div class="image_header">
@@ -56,10 +56,3 @@
 </div>
 </body>
 </html>
-<ul>
-    <li>Введите id книги, которую желаете удалить</li>
-    <li><input type="text" name="delete_book"></li>
-    <li>Введите id автора, данной книги</li>
-    <li><input type="text" name="delete_author"></li>
-    <li><input type="submit" value="Удалить книгу"></li>
-</ul>

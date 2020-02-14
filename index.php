@@ -17,7 +17,7 @@
                 <a href="INTERNAL_PAGE/DELETE_BOOK.php" class="botr">Удалить книгу</a>
             </div>
             <div class="button_header">
-                <a href="#" class="botr">Редактировать книгу</a>
+                <a href="INTERNAL_PAGE/EDIT_BOOK.php" class="botr">Редактировать книгу</a>
             </div>
         </div>
         <div class="image_header">
@@ -34,6 +34,7 @@
                 <tr>
                     <th>Название книги</th>
                     <th>ФИО автора</th>
+                    <th>Фио 2 Автора</th>
                     <th>Цена, руб.</th>
                 </tr>
                 <?php
@@ -46,13 +47,14 @@
                 //$data_a = $connection->query("SELECT * FROM `author`");
 
                 //Выводим результат
-                while ($row = $data->fetch()){
+                while ($row = $data->fetch()) {
                     $basik = rand(10, 1000);
                     echo "
                     <tr>
-                    <td>{$row['name']}</td>
-                    <td>{$row['fio']}</td>
-                    <td>$basik</td>
+                        <td>{$row['name']}</td>
+                        <td>{$row['fio']}</td>
+                        <td>{$row['']}</td>
+                        <td>$basik</td>
                     </tr>   
               ";
 

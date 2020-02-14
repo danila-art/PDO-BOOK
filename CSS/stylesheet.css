@@ -1,3 +1,13 @@
+@font-face {
+    font-family: form-fonts;
+    src: url("../FONTS/18003.ttf");
+}
+
+@font-face {
+    font-family: submit-fonts;
+    src: url("../FONTS/18064.ttf");
+}
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -88,6 +98,7 @@ img#image_book_header {
     /*При добавлении php кода нужно поменять на 100%*/
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
 }
 
 .footer {
@@ -142,29 +153,118 @@ tr:nth-child(even) {
     letter-spacing: 1px;
 }
 
+.main_add {
+    background-color: rgba(215, 215, 215, 0.91);
+    margin: 30px 30px 30px 30px;
+    /*При добавлении php кода нужно поменять на 100%*/
+    height: 100%;
+    /*При добавлении php кода нужно поменять на 100%*/
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
 /*-------------------Форма добавления--*/
-.form_add{
+.form_add {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.form_del {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+.form_add p {
+    font-family: 'form-fonts', sans-serif;
+    font-size: 18pt;
+}
+
+.form_del p {
+    font-family: 'form-fonts', sans-serif;
+    font-size: 18pt;
+}
+
+.oglav_form {
+    text-align: center;
+    font-family: 'form-fonts', sans-serif;
+}
+
+.text_input {
 
 }
-.oglav_form{
+
+.add_input {
 
 }
-.text_input{
+
+.button_submit {
+    float: right;
 
 }
-.add_input{
 
-}
-.button_submit
 /*-------------------Форма добавления--*/
 /*-------------------Форма удаления----*/
-.text_delete{
+.text_delete {
 
 }
-.delete_input{
+
+.delete_input {
 
 }
-.submit_delete{
+
+.submit_delete {
+float: right;
+}
+
+input[type = submit] {
+    background-color: #4CAF50;
+    font-family: 'submit-fonts', sans-serif;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    justify-content: flex-end;
 
 }
+
+input[type=text] {
+    background-color: #f5f5f5;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-style: solid;
+
+
+}
+
+input[type=text]:focus {
+    background-color: white;
+    border: 3px solid #555;
+    transition: 1s;
+}
+
 /*-------------------Форма удаления----*/
+/*-------------------Форма редактирования----*/
+.form_edit {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+}
+
+
+.form_edit p {
+    font-family: 'form-fonts', sans-serif;
+    font-size: 18pt;
+}
+/*-------------------Форма редактирования----*/
