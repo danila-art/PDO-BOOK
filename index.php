@@ -42,7 +42,7 @@
                 $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
 
                 //Получаем данные
-                $data = $connection->query("SELECT `book`.`id_b`, `book`.`name`, `author`.`id_a`, `author`.`fio` FROM `book` INNER JOIN `info` ON `info`.`id_a` = `book`.`id_b` INNER JOIN `author` ON `info`.`id_a` = `author`.`id_a`");
+                $data = $connection->query("SELECT `book`.`name`, `author`.`fio` FROM `info` INNER JOIN `book` ON `book`.`id_b` = `info`.`id_b` INNER JOIN `author` ON `author`.`id_a` = `info`.`id_a`");
                 //$data_b = $connection->query("SELECT * FROM `book`");
                 //$data_a = $connection->query("SELECT * FROM `author`");
 
