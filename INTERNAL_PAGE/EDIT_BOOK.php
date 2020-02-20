@@ -57,7 +57,7 @@
                     <input type="text" name="fio">
                 </div>
                 <div class="button_submit">
-                    <input type="submit" value="Редактировать">
+                    <input type="submit" class="submit" value="Редактировать">
                 </div>
             </form>
         </div>

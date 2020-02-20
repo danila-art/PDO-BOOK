@@ -45,7 +45,7 @@
                    <input type="text" name="delete_author">
                 </div>
                 <div class="submit_delete">
-                    <input type="submit" value="Удалить книгу">
+                    <input type="submit" class="submit" value="Удалить книгу">
                 </div>
             </form>
         </div>

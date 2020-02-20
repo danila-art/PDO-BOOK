@@ -33,16 +33,20 @@
                 </caption>
                 <tr>
                     <th>Название книги</th>
-                    <th>ФИО автора</th>
-                    <th>Фио 2 Автора</th>
                     <th>Цена, руб.</th>
+                    <th></th>
                 </tr>
                 <?php
                 //Выполняем подключение к базе данных
-                $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
+                try {
+                    $connection = new PDO('mysql:host=localhost;dbname=books;charset=utf8', 'root', '');
+                } catch (PDOException $e) {
+                    echo 'Подключение не удалось:' . $e->getMessage();
+                    exit();
+                }
 
                 //Получаем данные
-                $data = $connection->query("SELECT `book`.`name`, `author`.`fio` FROM `info` INNER JOIN `book` ON `book`.`id_b` = `info`.`id_b` INNER JOIN `author` ON `author`.`id_a` = `info`.`id_a`");
+                $data = $connection->query("SELECT * FROM `book`");
                 //$data_b = $connection->query("SELECT * FROM `book`");
                 //$data_a = $connection->query("SELECT * FROM `author`");
 
@@ -51,10 +55,11 @@
                     $basik = rand(10, 1000);
                     echo "
                     <tr>
-                        <td>{$row['name']}</td>
-                        <td>{$row['fio']}</td>
-                        <td>{$row['']}</td>
+                        <form action='INTERNAL_PAGE/MORE_BOOK.php' method='post'>
+                            <input type='text' class='more_input' value='{$row['id_b']}' name='id_b'><td>{$row['name']}</td>
                         <td>$basik</td>
+                        <td><input type='submit' value='Подробнее' id='submit' class='more_submit'></td>
+                        </form>
                     </tr>   
               ";
 
